@@ -14,9 +14,10 @@
 
 const Sequelize = require('sequelize');
 
+// sequelize is use for creating data objects --> database name , username , password
 const sequelize = new Sequelize('node-tutorial','root','root123',{
     dialect:'mysql',
     host:'localhost'
 });
 
-module.exports=sequelize;
+module.exports=sequelize; 

@@ -1,7 +1,7 @@
 const products = [];
 
 exports.getAddProduct=(req,res,next)=>{
-    res.render('add-product',{pageTitle:'add-product',path:'/add-product'});
+    res.render('admin/add-products',{pageTitle:'add-product',path:'/add-products'});
 };
 
 exports.postAddProduct=(req,res,next)=>{
@@ -10,7 +10,7 @@ exports.postAddProduct=(req,res,next)=>{
 };
 
 exports.getProducts=(req,res,next)=>{ 
-    res.render('shop',{
+    res.render('shop/product-list',{
         prods:products,
         pageTitle:'shop',
         path:'/'});

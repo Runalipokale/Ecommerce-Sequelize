@@ -1,14 +1,28 @@
+
 const path = require('path');
+
 const express = require('express');
-//for using product controller in this file
-const productController = require('../controller/product');
+
+//for using admin controller in this file
+const adminController = require('../controller/admin');
+
 const router = express.Router();
 
-//get request for getting product data
-router.get('/add-product',productController.getAddProduct);
+// /admin/products => GET
+router.get('/products', adminController.getProducts);
 
-//post request for posting product data
-router.post('/add-product',productController.postAddProduct);
+// /admin/add-product => GET
+router.get('/add-products', adminController.getAddProduct);
+
+// /admin/add-product => POST
+router.post('/add-product', adminController.postAddProduct);
+
+router.get('/edit-product/:productId', adminController.getEditProduct);
+
+router.post('/edit-product', adminController.postEditProduct);
+
+router.post('/delete-product', adminController.postDeleteProduct);
+
 
 //sendfile method
 // router.get('/product',(req,res,next)=>{
@@ -17,3 +31,17 @@ router.post('/add-product',productController.postAddProduct);
 
 
 module.exports = router; // exporting this file module to another file
+
+
+
+
+
+
+
+
+
+
+
+
+
+
