@@ -20,5 +20,9 @@
   "license": "ISC",
   "devDependencies": {
     "nodemon": "^2.0.22"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Runalipokale/Ecommerce-Sequelize.git"
   }
 }
